@@ -16,8 +16,8 @@ public class LongestCommonPrefix {
 
     public String longestCommonPrefix(String[] strs) {
 
-        if (strs.length >= 1) {
-
+        if (strs.length > 1) {
+            
             int minStringLength = Integer.MAX_VALUE;
             int longestSubstringCounter = 0;
             String longestCommonPrefix;
@@ -43,8 +43,11 @@ public class LongestCommonPrefix {
 
             return "";
 
+        } else if (strs.length == 1) {
+            return strs[0];
         } else {
             return "";
         }
+
     }
 }

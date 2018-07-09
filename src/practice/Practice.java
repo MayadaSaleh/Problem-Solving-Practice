@@ -20,7 +20,7 @@ public class Practice {
     public static void main(String[] args) {
 
         LongestCommonPrefix longestCommen = new LongestCommonPrefix();
-        String[] strs = {"koioi","koiouiu","koioin"};
+        String[] strs = {};
         String commonPrefix = longestCommen.longestCommonPrefix(strs);
         System.out.println("Longest Common Prefix is " + commonPrefix);
     }

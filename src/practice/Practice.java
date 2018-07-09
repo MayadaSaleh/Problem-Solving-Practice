@@ -5,6 +5,9 @@
  */
 package practice;
 
+import leetcode.LongestCommonPrefix;
+
+
 /**
  *
  * @author Mayada
@@ -15,7 +18,11 @@ public class Practice {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+
+        LongestCommonPrefix longestCommen = new LongestCommonPrefix();
+        String[] strs = {"koioi","koiouiu","koioin"};
+        String commonPrefix = longestCommen.longestCommonPrefix(strs);
+        System.out.println("Longest Common Prefix is " + commonPrefix);
     }
-    
+
 }

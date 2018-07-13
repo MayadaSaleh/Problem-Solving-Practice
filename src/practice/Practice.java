@@ -7,9 +7,7 @@ package practice;
 
 import leetcode.ContainsDuplicate;
 import leetcode.LongestCommonPrefix;
-import leetcode.MaximumDepthOfBinaryTree;
 import leetcode.SearchInsertPosition;
-import leetcode.TreeNode;
 
 /**
  *

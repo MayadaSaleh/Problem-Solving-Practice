@@ -5,9 +5,11 @@
  */
 package practice;
 
+import java.util.List;
 import leetcode.ContainsDuplicate;
 import leetcode.LongestCommonPrefix;
 import leetcode.SearchInsertPosition;
+import leetcode.TopFrequentElements;
 
 /**
  *
@@ -29,20 +31,24 @@ public class Practice {
 //        
 //        int result= binarySearch.searchInsert(nums,1309);     
 //        System.out.println("result "+result);
-
-
 //        TreeNode tr = new TreeNode(5);
 //        MaximumDepthOfBinaryTree m = new MaximumDepthOfBinaryTree();
 //        int x = m.maxDepth(tr);
 //        System.out.println("practice.Practice.main()" + x);
 //        
 //        
+//        ContainsDuplicate duplicate = new ContainsDuplicate();
+//        int[]nums={1,5,3,7,1};
+//        Boolean check =duplicate.checkDuplicateUsingSorting(nums);
+//        System.out.println("result is "+check);
+        TopFrequentElements tfe = new TopFrequentElements();
+        int[] nums = {1,1,1,2,2,3};
+        List list = tfe.topKFrequent(nums, 2);
         
-        ContainsDuplicate duplicate = new ContainsDuplicate();
-        int[]nums={1,5,3,7,1};
-        Boolean check =duplicate.checkDuplicateUsingSorting(nums);
-        System.out.println("result is "+check);
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println("result" + list.get(i));
+        }
         
     }
-
+    
 }

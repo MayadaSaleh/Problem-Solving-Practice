@@ -5,12 +5,14 @@
  */
 package leetcode;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
 /**
  *
  * @author Mayada
+ * @author mohamed
  */
 public class TwoSum {
 
@@ -51,4 +53,29 @@ public class TwoSum {
         return -1;
     }
 
+    /**
+     * @param nums
+     * @param target
+     * @return return indices of the two numbers such that they add up to a specific target
+     */
+    public int[] twoSumOrderOfN(int[] nums, int target) {
+      //Brute force solution take O(n2) time.
+      //Implement Solutiontake O(n) time and O(n) space.
+      HashMap<Integer,Integer> numsIndeceis = new HashMap<Integer,Integer>(nums.length);
+      for (int index = 0;index < nums.length ; index++) {
+          numsIndeceis.put(nums[index],index);
+      }
+      
+      int [] result = new int [2];
+      for (int index = 0;index < nums.length ; index++) {
+          if (numsIndeceis.containsKey(target - nums[index]) && numsIndeceis.get(target - nums[index]) != index) {
+              result [0] = index;
+              result [1] = numsIndeceis.get(target - nums[index]);
+              return result;
+           }
+      }
+      
+      return null;
+  }
+    
 }

@@ -20,30 +20,32 @@ public class TopFrequentElements {
 
     public List<Integer> topKFrequent(int[] nums, int k) {
 
-        List<Integer> list = new ArrayList<>();
         Map<Integer, Integer> myMap = new HashMap<>();
         int frequency = 0;
-        PriorityQueue<ArrayElements> pQueue = new PriorityQueue<>();
+        PriorityQueue<ArrayElement> pQueue = new PriorityQueue<>();
 
         // Insert Elements by there larget occurance number 
         for (int i = 0; i < nums.length; i++) {
-            if (myMap.get(nums[i]) == null) {
+            if (!myMap.containsKey(nums[i])) {
                 myMap.put(nums[i], 1);
 
             } else {
                 frequency = myMap.get(nums[i]);
-                myMap.remove(nums[i]);
                 myMap.put(nums[i], frequency + 1);
             }
 
         }
 
-        // Adding elements to priority queue accourding to max occurance
+        // Adding elements to priority queue accourding to max occurrence 
         Iterator iterator = myMap.entrySet().iterator();
+        int mappedElement, mappedFrequency;
         while (iterator.hasNext()) {
             Map.Entry pair = (Map.Entry) iterator.next();
-            pQueue.add(new ArrayElements((Integer)pair.getKey(),(Integer)pair.getValue()));
+             mappedElement = (Integer) pair.getKey();
+             mappedFrequency = (Integer) pair.getValue();
+            pQueue.add(new ArrayElement(mappedElement,mappedFrequency));
         }
+        List<Integer> list = new ArrayList<>(k);
 
         for (int i = 0; i < k; i++) {
             list.add(pQueue.poll().getElement());

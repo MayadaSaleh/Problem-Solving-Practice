@@ -9,12 +9,12 @@ package leetcode;
  *
  * @author Mayada
  */
-public class ArrayElements implements Comparable<ArrayElements>{
+public class ArrayElement implements Comparable<ArrayElement>{
     
-    int element;
-    int frequency;
+   private int element;
+   private int frequency;
     
-    public ArrayElements(int element, int frequency){
+    public ArrayElement(int element, int frequency){
         this.element = element;
         this.frequency = frequency;
     }
@@ -28,7 +28,7 @@ public class ArrayElements implements Comparable<ArrayElements>{
     }
 
     @Override
-    public int compareTo(ArrayElements t) {
+    public int compareTo(ArrayElement t) {
             return t.frequency - this.frequency;
     }
     

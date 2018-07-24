@@ -33,9 +33,7 @@ public class TopFrequentElements {
                 frequency = myMap.get(nums[i]);
                 myMap.put(nums[i], frequency + 1);
             }
-
         }
-
         // Adding elements to priority queue accourding to max occurrence 
         Iterator iterator = myMap.entrySet().iterator();
         int mappedElement, mappedFrequency;
@@ -46,11 +44,19 @@ public class TopFrequentElements {
             pQueue.add(new ArrayElement(mappedElement,mappedFrequency));
         }
         List<Integer> list = new ArrayList<>(k);
-
         for (int i = 0; i < k; i++) {
             list.add(pQueue.poll().getElement());
         }
         return list;
     }
-
+        // function to get summation of odd numbers from 1 to 15 
+     public int getSummation (){
+        int sum =0;
+        for(int i=1; i<=15;i++){
+            if(i%2 !=0){
+                sum = sum+i ;
+            }
+        }
+        return sum;
+    }
 }

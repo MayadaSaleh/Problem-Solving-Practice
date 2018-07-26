@@ -9,6 +9,7 @@ import java.util.List;
 import leetcode.ContainsDuplicate;
 import leetcode.IsSubsequence;
 import leetcode.LongestCommonPrefix;
+import leetcode.MaximumSwap;
 import leetcode.SearchInsertPosition;
 import leetcode.TopFrequentElements;
 
@@ -42,23 +43,28 @@ public class Practice {
 //        int[]nums={1,5,3,7,1};
 //        Boolean check =duplicate.checkDuplicateUsingSorting(nums);
 //        System.out.println("result is "+check);
-        TopFrequentElements tfe = new TopFrequentElements();
-        int[] nums = {1, 1, 1, 2, 2, 3};
-        List list = tfe.topKFrequent(nums, 2);
 
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println("result" + list.get(i));
-        }
 
+
+
+//        TopFrequentElements tfe = new TopFrequentElements();
+//        int[] nums = {1, 1, 1, 2, 2, 3};
+//        List list = tfe.topKFrequent(nums, 2);
+//
+//        for (int i = 0; i < list.size(); i++) {
+//            System.out.println("result" + list.get(i));
+//        }
+//
+//        
+//        IsSubsequence subSequenceCheck = new IsSubsequence();
+//       Boolean checkResult= subSequenceCheck.isSubsequence("ac","abcde");
+//        
+//        System.out.println("practice.Practice.main()"+ checkResult);
+//        
         
-        IsSubsequence subSequenceCheck = new IsSubsequence();
-       Boolean checkResult= subSequenceCheck.isSubsequence("ac","abcde");
-        
-        System.out.println("practice.Practice.main()"+ checkResult);
-        
-        
-        
-        
+        MaximumSwap maxSwap = new MaximumSwap();
+        int result = maxSwap.maximumSwap(5387);
+        System.out.println("Max is " + result);
     }
 
 }

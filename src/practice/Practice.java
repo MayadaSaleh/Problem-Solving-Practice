@@ -12,6 +12,7 @@ import leetcode.LengthofLastWord;
 import leetcode.LongestCommonPrefix;
 import leetcode.MaximumSubarray;
 import leetcode.MaximumSwap;
+import leetcode.MissingNumber;
 import leetcode.SearchInsertPosition;
 import leetcode.TopFrequentElements;
 import leetcode.TopKFrequentWords;
@@ -74,8 +75,17 @@ public class Practice {
 //        int[] nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
 //        int result = ms.maxSubArray(nums);
 //        System.out.println("Result = " + result);
-        LengthofLastWord lengthofLast = new LengthofLastWord();
-        int result = lengthofLast.lengthOfLastWord("");
+
+
+//        LengthofLastWord lengthofLast = new LengthofLastWord();
+//        int result = lengthofLast.lengthOfLastWord("");
+//        System.out.println("Result = " + result);
+
+
+        MissingNumber missingNumber = new MissingNumber();
+        int [] nums ={3,0,1};
+        int result= missingNumber.missingNumber(nums);
         System.out.println("Result = " + result);
     }
+
 }

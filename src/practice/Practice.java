@@ -8,6 +8,7 @@ package practice;
 import java.util.List;
 import leetcode.ContainsDuplicate;
 import leetcode.IsSubsequence;
+import leetcode.LengthofLastWord;
 import leetcode.LongestCommonPrefix;
 import leetcode.MaximumSubarray;
 import leetcode.MaximumSwap;
@@ -69,13 +70,12 @@ public class Practice {
 //        System.out.println("practice.Practice.main()" + rr.get(0));
 //       System.out.println("practice.Practice.main()" + rr.get(1));
 //       System.out.println("practice.Practice.main()" + rr.get(2));
-
-
-
-        MaximumSubarray ms = new MaximumSubarray();
-        int[] nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
-        int result = ms.maxSubArray(nums);
+//        MaximumSubarray ms = new MaximumSubarray();
+//        int[] nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+//        int result = ms.maxSubArray(nums);
+//        System.out.println("Result = " + result);
+        LengthofLastWord lengthofLast = new LengthofLastWord();
+        int result = lengthofLast.lengthOfLastWord("");
         System.out.println("Result = " + result);
-
     }
 }

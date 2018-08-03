@@ -16,7 +16,7 @@ import java.util.Map;
 public class MaximumSwap {
 
     public int maximumSwap(int num) {
-
+        
         String numString = String.valueOf(num);
         int[] myArray = new int[numString.length()];
         int[] sortedArray = new int[numString.length()];
@@ -29,15 +29,14 @@ public class MaximumSwap {
         }
 
         Arrays.sort(sortedArray);
-        hh:
+        Loop:
         for (int i = 0; i < myArray.length; i++) {
             if (myArray[i] != sortedArray[(myArray.length) - i - 1]) {
                 int x1 = myArray[i];
-                int x2 = sortedArray[(myArray.length) - i - 1];
-                myArray[i] = x2;
-                int place = myMap.get(x2);
+                myArray[i] = sortedArray[(myArray.length) - i - 1];
+                int place = myMap.get(sortedArray[(myArray.length) - i - 1]);
                 myArray[place] = x1;
-                break hh;
+                break Loop;
             }
         }
         int result = 0;
@@ -47,4 +46,5 @@ public class MaximumSwap {
         }
         return result;
     }
+
 }

@@ -9,9 +9,11 @@ import java.util.List;
 import leetcode.ContainsDuplicate;
 import leetcode.IsSubsequence;
 import leetcode.LongestCommonPrefix;
+import leetcode.MaximumSubarray;
 import leetcode.MaximumSwap;
 import leetcode.SearchInsertPosition;
 import leetcode.TopFrequentElements;
+import leetcode.TopKFrequentWords;
 
 /**
  *
@@ -43,10 +45,6 @@ public class Practice {
 //        int[]nums={1,5,3,7,1};
 //        Boolean check =duplicate.checkDuplicateUsingSorting(nums);
 //        System.out.println("result is "+check);
-
-
-
-
 //        TopFrequentElements tfe = new TopFrequentElements();
 //        int[] nums = {1, 1, 1, 2, 2, 3};
 //        List list = tfe.topKFrequent(nums, 2);
@@ -61,10 +59,23 @@ public class Practice {
 //        
 //        System.out.println("practice.Practice.main()"+ checkResult);
 //        
-        
-        MaximumSwap maxSwap = new MaximumSwap();
-        int result = maxSwap.maximumSwap(5387);
-        System.out.println("Max is " + result);
-    }
+//        MaximumSwap maxSwap = new MaximumSwap();
+//        int result = maxSwap.maximumSwap(5726);
+//        System.out.println("Max is " + result);
+//
+//        TopKFrequentWords top = new TopKFrequentWords();
+//        String[] vv = {"i", "love", "leetcode", "i", "love", "coding"};
+//        List<String> rr = top.topKFrequent(vv, 3);
+//        System.out.println("practice.Practice.main()" + rr.get(0));
+//       System.out.println("practice.Practice.main()" + rr.get(1));
+//       System.out.println("practice.Practice.main()" + rr.get(2));
 
+
+
+        MaximumSubarray ms = new MaximumSubarray();
+        int[] nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+        int result = ms.maxSubArray(nums);
+        System.out.println("Result = " + result);
+
+    }
 }

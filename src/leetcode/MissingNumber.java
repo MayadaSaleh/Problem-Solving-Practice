@@ -5,8 +5,10 @@
  */
 package leetcode;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.IntStream;
 
 /**
  *
@@ -15,17 +17,13 @@ import java.util.Set;
 public class MissingNumber {
 
     public int missingNumber(int[] nums) {
-
-        Set<Integer> myMap = new HashSet<Integer>();
-        for (int i = 0; i <= nums.length; i++) {
-            myMap.add(i);
-        }
+        int sum = 0;
         for (int i = 0; i < nums.length; i++) {
-            if (myMap.contains(nums[i])) {
-                myMap.remove(nums[i]);
-            }
+            sum += nums[i];
         }
-        return myMap.iterator().next();
+        int n = nums.length;
+        int sumTobe = (n * (n + 1) / 2);
+        return (sumTobe - sum);
     }
 
 }

@@ -7,6 +7,8 @@ package practice;
 
 import java.util.List;
 import leetcode.ContainsDuplicate;
+import leetcode.FindtheDifference;
+import leetcode.FirstUniqueCharacterinaString;
 import leetcode.IsSubsequence;
 import leetcode.LengthofLastWord;
 import leetcode.LongestCommonPrefix;
@@ -76,20 +78,23 @@ public class Practice {
 //        int[] nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
 //        int result = ms.maxSubArray(nums);
 //        System.out.println("Result = " + result);
-
-
 //        LengthofLastWord lengthofLast = new LengthofLastWord();
 //        int result = lengthofLast.lengthOfLastWord("");
 //        System.out.println("Result = " + result);
-
-
 //        MissingNumber missingNumber = new MissingNumber();
 //        int [] nums ={3,0,1};
 //        int result= missingNumber.missingNumber(nums);
 //        System.out.println("Result = " + result);
+//        ReverseString reverseString = new ReverseString();
+//        String result = reverseString.reverseString("hello");
+//        System.out.println("Result = " + result);
+//        FindtheDifference findDiff = new FindtheDifference();
+//        char result = findDiff.findTheDifference("memo", "memom");
+//        System.out.println("Result = " + result);
 
-        ReverseString reverseString = new ReverseString();
-        String result = reverseString.reverseString("hello");
+
+        FirstUniqueCharacterinaString firstUnique = new FirstUniqueCharacterinaString();
+        int result = firstUnique.firstUniqChar("dddccdbba");
         System.out.println("Result = " + result);
     }
 
